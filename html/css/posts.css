@@ -1,5 +1,7 @@
 /* 追加するCSS */
-
+.header {
+    background-color: red;
+}
 
 
 /* 投稿に関するCSS */
