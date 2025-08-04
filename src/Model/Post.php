@@ -59,7 +59,7 @@ class Post
     public function fetch(): array
     {
         $pdo = $this->dbConnect();
-        $sql = "SELECT `id`, `name`, `message` 
+        $sql = "SELECT `id`, `name`, `message`, `favorite`
             FROM posts 
             ORDER BY `id` DESC";
         $statement = $pdo->query($sql);
@@ -78,5 +78,15 @@ class Post
         $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 
         return $pdo;
+    }
+
+    public function good(int $id): array
+    {
+        $pdo = $this->dbConnect();
+        $query = "UPDATE `posts` set `favorite` = `favorite` + 1 where `id` = $id;";
+        $pdo->query($query);
+        $query = "select `favorite` from `posts` where `id` = $id;";
+        $statement = $pdo->query($query);
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
 }

@@ -31,6 +31,7 @@ const updatePost = (self) => {
             post_object.querySelector('.post-text').readOnly = true;
             post_object.querySelector('.edit-btn').innerHTML = '✒️編集';
             post_object.querySelector('.edit-btn').setAttribute("onclick", `editPost(this);`);
+
         }
     }
 }
@@ -49,6 +50,22 @@ const deletePost = (self) => {
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
             alert(xhr.responseText);
             post_object.parentNode.remove();
+        }
+    }
+}
+
+const goodpost = (self) => {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/Post/good');
+    xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+
+    const post_object = self.parentNode.parentNode;
+    xhr.send(`id=${post_object.dataset.id}`);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            const response = xhr.responseText;
+        const element = self.querySelector('.favorite');
+        element.textContent = response;
         }
     }
 }
