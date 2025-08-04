@@ -19,7 +19,7 @@
 
 <body>
     <div class="header">
-        <span>N（ベータバージョン）</span>
+        <span>NE_note</span>
     </div>
 
     <br>
@@ -52,8 +52,8 @@
                                 <img src="/imgs/egg_purple.png" class="post-image" alt="egg_icon">
                             </div>
                             <div class="post-info" data-id="<?=$post['id']?>">
-                                <input type="text" class="post-name post-not-edit-input" value="{名前}" readonly><br>
-                                <textarea class="post-text post-not-edit-textarea" readonly>Hello, world</textarea>
+                                <input type="text" class="post-name post-not-edit-input" value=<?=$post["name"]?> readonly><br>
+                                <textarea class="post-text post-not-edit-textarea" readonly><?=$post["message"]?>にゃーん</textarea>
                                 <div class="post-action">
                                     <button type="button" class="post-action-btn edit-btn" onclick="editPost(this)">✒️編集</button>
                                     <button type="button" class="post-action-btn delete-btn" onclick="deletePost(this)">🗑削除</button>

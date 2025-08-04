@@ -1,9 +1,24 @@
 /* 追加するCSS */
+
+.content {
+    background-color: azure;
+}
+
 .header {
     background-color: red;
 }
 
+.post-form-name-input {
+    width: 400px;
+}
+.post-form-submit-button {
+    width: 200px;
+    background-color: antiquewhite;
+}
 
+.post-form-message-text {
+    width: 1000px;
+}
 /* 投稿に関するCSS */
 .post {
     display: flex;
@@ -11,6 +26,7 @@
 
 .post-icon {
     width: 120px;
+
 }
 
 .post-image {
