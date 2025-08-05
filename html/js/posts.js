@@ -64,7 +64,7 @@ const goodpost = (self) => {
     xhr.onreadystatechange = function() {
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
             const response = xhr.responseText;
-        const element = self.querySelector('.favorite');
+        const element = self.querySelector('.favorite-count');
         element.textContent = response;
         }
     }

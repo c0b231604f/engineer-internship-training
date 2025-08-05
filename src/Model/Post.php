@@ -41,6 +41,7 @@ class Post
      * 投稿データを削除する
      *
      * @param int $id ID
+     * 
      */
     public function delete(int $id): void
     {
