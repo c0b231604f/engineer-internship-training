@@ -1,11 +1,23 @@
 /* 追加するCSS */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+
 
 .content {
     background-color: azure;
 }
 
 .header {
-    background-color: red;
+    font-family: 'Sacramento', cursive;
+    position: sticky;
+    top: 0;
+    background-color:aquamarine;
+    z-index: 10;
+}
+
+.no-link-color {
+    color: inherit;
+    text-decoration: none;
 }
 
 .post-form-name-input {

@@ -48,7 +48,7 @@ class Post
         // 未実装
         // 応用課題:投稿削除機能
         $pdo = $this->dbConnect();
-        $query = "UPDATE `posts` set `name` = '$name', `message` = '$message' where `id` = $id;";
+        $query = "delete from `posts` where `id` = $id;";
         $pdo->query($query);
     }
 

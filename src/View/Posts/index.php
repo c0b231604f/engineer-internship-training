@@ -19,7 +19,7 @@
 
 <body>
     <div class="header">
-        <span>NE_note</span>
+        <h1 style="text-align:center"><a href="https://curly-chainsaw-v6p7ww7pgw992wp95-8000.app.github.dev/" class="no-link-color">NE_note (ΦωΦ)</a></h1>
     </div>
 
     <br>
